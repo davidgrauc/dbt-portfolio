@@ -1,0 +1,9 @@
+target/
+logs/
+dbt_packages/
+*.duckdb
+*.duckdb.wal
+.user.yml
+dbt_internal_packages/
+.DS_Store
+hoja-de-ruta/

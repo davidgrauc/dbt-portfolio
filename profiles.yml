@@ -1,0 +1,10 @@
+# Conexiones. Cada profile tiene uno o varios targets (entornos);
+# `dbt build` usa el indicado en `target` salvo que se pase --target.
+# Este fichero no lleva secretos: DuckDB es un fichero local.
+marketing_dbt:
+  target: dev
+  outputs:
+    dev:
+      type: duckdb
+      path: marketing.duckdb
+      threads: 4

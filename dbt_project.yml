@@ -1,0 +1,20 @@
+# Configuración del proyecto dbt.
+# dbt lee este fichero primero: aquí se definen el nombre, el profile
+# (la conexión, en profiles.yml) y dónde están los modelos, seeds, macros y tests.
+name: marketing_dbt
+profile: marketing_dbt
+version: "0.1.0"
+
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+test-paths: ["tests"]
+
+# Lo que borra `dbt clean`.
+clean-targets: ["target"]
+
+models:
+  marketing_dbt:
+    # Por defecto, cada modelo se crea como vista.
+    +materialized: view

@@ -1,0 +1,18 @@
+models:
+  - name: stg_productos
+    description: Catálogo de productos. Provisional hasta que sea un seed en la semana 2.
+    columns:
+      - name: id_producto
+        description: Código del producto (A, B o C).
+        data_tests:
+          - unique
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ['A', 'B', 'C']
+      - name: nombre_producto
+        description: Nombre comercial.
+      - name: precio_eur
+        description: Precio de venta en euros.
+        data_tests:
+          - not_null

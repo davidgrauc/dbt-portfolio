@@ -1,0 +1,15 @@
+models:
+  - name: dim_productos_premium
+    description: Catálogo de productos premium (>1000 euros). Provisional hasta que sea un seed en la semana 2.
+    columns:
+      - name: id_producto
+        description: Código del producto (A, B o C).
+        data_tests:
+          - unique
+          - not_null
+      - name: nombre_producto
+        description: Nombre comercial.
+      - name: precio_eur
+        description: Precio de venta en euros.
+        data_tests:
+          - not_null
